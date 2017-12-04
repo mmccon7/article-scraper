@@ -1,48 +1,60 @@
-<div class="row">
-    <div class="col-md-2"></div>
-    <div id="content" class="col-sm-12 col-md-8">
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-2 sidenav">
+            <h4>Article Navigation</h4>
+            <hr>
+            <ul class="nav nav-pills nav-stacked">
+                <p id="readArticle" class="hidden">
+                    <a href="" id="article" target="_blank">
+                        <button class="btn btn-primary">Read Article</button>
+                    </a>
+                </p>
+                <p>
+                    <button id="getArticles" class="btn btn-primary">Read Articles</button>
+                </p>
+                <div id="navigation">
+                </div>
+            </ul>
+            <br>
+            <h4>Comments</h4>
+            <hr>
+            <div id="articleComments">
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-2"></div>
-            <div class="col-sm-12 col-md-8">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h2 id="title" class="text-center">News for Everyone!</h2></div>
-                    <div class="panel-body">
-                        <img id="image" src="#" alt="title" class="img-thumbnail center-block hidden">
-                        <p id="summary">Check out what articles are available in the world today. You'll be surprised as to what you'll find!</p>
-                        <p id="readArticle" class="hidden">
-                            <a href="" id="article" target="_blank">
-                                <button class="btn btn-primary">Read Article</button>
-                            </a>
-                        </p>
-                        <p>
-                            <button id="getArticles" class="btn btn-primary">Read Articles</button>
-                        </p>
-                        <div id="comments">
-                            <h3 class="text-center text-primary">Comments</h3>
-                            <div id="articleComments">
+            <div id="content" class="col-sm-12 col-md-9">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-sm-12 col-md-9">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h2 id="title" class="text-center">News for Everyone!</h2></div>
+                            <div class="panel-body">
+                                <img id="image" src="#" alt="title" class="img-thumbnail center-block hidden">
+                                <h4 id="summary">Check out what articles are available in the world today. You'll be surprised as to what you'll find! Click on the left to read the Articles </h4>
+                                <div id="comments">
+                                    <h3 class="text-center text-primary">Add Comment</h3>
+                                    <div class="form-group">
+                                        <label for="name">Name:</label>
+                                        <input type="text" class="form-control" id="name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="commentText">Comment:</label>
+                                        <textarea class="form-control" rows="5" id="commentText"></textarea>
+                                    </div>
+                                    {{!--
+                                    <p>
+                                        <textarea id="commentText" rows="5" placeholder=" Your Comment"></textarea>
+                                    </p> --}}
+                                    <button id="addComment" class="btn btn-primary btn-xs">Add Comment</button>
+                                </div>
                             </div>
-                            <h3 class="text-center text-primary">Add Comment</h3>
-                            <div class="form-group">
-                                <label for="name">Name:</label>
-                                <input type="text" class="form-control" id="name">
-                            </div>
-                            <div class="form-group">
-                                <label for="commentText">Comment:</label>
-                                <textarea class="form-control" rows="5" id="commentText"></textarea>
-                            </div>
-                            {{!--
-                            <p>
-                                <textarea id="commentText" rows="5" placeholder=" Your Comment"></textarea>
-                            </p> --}}
-                            <button id="addComment" class="btn btn-primary btn-xs">Add Comment</button>
                         </div>
                     </div>
-                    <div class="panel-footer">
-                        <div id="navigation">
-                        </div>
-                    </div>
+                    <div class="col-md-2"></div>
                 </div>
             </div>
-            <div class="col-md-2"></div>
         </div>
+    </div>
+</div>

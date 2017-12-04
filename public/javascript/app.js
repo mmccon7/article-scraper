@@ -71,18 +71,19 @@ $(document).ready(function() {
         $('#article').attr('href', article.storyLink);
         $("#getArticles").addClass("hidden");
         $("#navigation").empty();
+        nextArticle = currentArticle + 1;
+        if (nextArticle < articleList.length) {
+            $('#navigation').append('<button id="' + nextArticle + '" class="btn btn-primary next">Next Article</button>');
+        } else {
+            $('#navigation').append('<button id="' + nextArticle + '" class="btn btn-primary disabled next">Next Article</button>');
+        }
         previousArticle = currentArticle - 1;
         if (previousArticle >= 0) {
             $('#navigation').append('<button id="' + previousArticle + '" class="btn btn-primary previous">Previous Article</button>');
         } else {
             $('#navigation').append('<button id="' + previousArticle + '" class="btn btn-primary disabled previous">Previous Article</button>');
         }
-        nextArticle = currentArticle + 1;
-        if (nextArticle < articleList.length) {
-            $('#navigation').append('<button id="' + nextArticle + '" class="btn btn-primary pull-right next">Next Article</button>');
-        } else {
-            $('#navigation').append('<button id="' + nextArticle + '" class="btn btn-primary pull-right disabled next">Next Article</button>');
-        }
+
         articleId = article._id;
         showComments(articleId);
     }
