@@ -1,7 +1,7 @@
 var mongoose = require("mongoose");
 
 // Local Database Configuration with Mongoose
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://heroku_tjfptdzd:496k70poqndda9fd5uub3qe2g4@ds125146.mlab.com:25146/heroku_tjfptdzd";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
 mongoose.connect(MONGODB_URI, function(error) {
     if (error) throw error;
